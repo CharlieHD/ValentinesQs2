@@ -3,22 +3,22 @@
 // Function to handle button click events
 function selectOption(option) {
     // Check which option was clicked
-    if (option === 'yes') {
+    if (option === 'Sí') {
         // Flash rainbow colors
         flashRainbowColors(function() {
             document.getElementById('question').style.display = 'none'; // Hide the question
             displayCatHeart(); // Display the cat-heart.gif
         });
-    } else if (option === 'no') {
+    } else if (option === 'No') {
         // Change text on the "No" button to "You sure?"
-        document.getElementById('no-button').innerText = 'Segura?'; 
-        // Increase font size of "Yes" button
-        var yesButton = document.getElementById('Sí-button');
-        var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
+        document.getElementById('No-button').innerText = 'Segura?'; 
+        // Increase font size of "Sí" button
+        var SíButton = document.getElementById('Sí-button');
+        var currentFontSize = window.getComputedStyle(SíButton).getPropertyValue('font-size');
         var newSize = parseFloat(currentFontSize) * 2; // Increase font size by  * 2px
-        yesButton.style.fontSize = newSize + 'px';
+        SíButton.style.fontSize = newSize + 'px';
     } else {
-        // If neither "Yes" nor "No" was clicked, show an alert message
+        // If neither "Sí" Nor "No" was clicked, show an alert message
         alert('Invalid option!');
     }
 }
@@ -40,14 +40,14 @@ function flashRainbowColors(callback) {
     }, 2000); // Flash colors for 2 seconds
 }
 
-// Function to display the Joshua.gif initially
+// Function to display the Joshua.jpg initially
 function displayJoshua() {
     // Get the container where the image will be displayed
     var imageContainer = document.getElementById('image-container');
     // Create a new Image element for the Joshua
     var JoshuaImage = new Image();
     // Set the source (file path) for the Joshua image
-    JoshuaImage.src = 'Joshua.gif'; // Assuming the Joshua image is named "Joshua.gif"
+    JoshuaImage.src = 'Joshua.jpg'; // Assuming the Joshua image is named "Joshua.jpg"
     // Set alternative text for the image (for accessibility)
     JoshuaImage.alt = 'Joshua';
     // When the Joshua image is fully loaded, add it to the image container
@@ -76,5 +76,5 @@ function displayCatHeart() {
     };
 }
 
-// Display the Joshua.gif initially
+// Display the Joshua.jpg initially
 displayJoshua();
